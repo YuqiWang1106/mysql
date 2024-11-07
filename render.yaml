@@ -8,8 +8,12 @@ services:
     name: mysql
     mountPath: /var/lib/mysql
     sizeGB: 10
+  isAllowList:
+    - source: 0.0.0.0/0
+      description: everywhere
   envVars:
   - fromGroup: mysql
+  
 
 envVarGroups:
 - name: mysql
